@@ -1,0 +1,109 @@
+
+<div class="container2">
+    
+<img src="assets/form.png">
+
+<div class="container  p-5">
+    
+    <p>CREATE YOUR ACCOUNT</p>
+    <br>
+    <form [formGroup]="ourValidation">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">User Name</label>
+          <input type="text" class="form-control" placeholder="UserName" formControlName="username" [class.successMsg]="checkUsernameValidation" [class.errorMsg]="!checkUsernameValidation" >
+          <div *ngIf="!(checkUsernameValidation) && getUserName.touched"  class="form-text text-danger" > {{getUserName.errors | json}} </div>
+        </div>
+    
+        <div class="mb-3">
+            <label  class="form-label">Age</label>
+            <input type="number" class="form-control" placeholder="Age" formControlName="age" [class.successMsg]="checkAgeValidation" [class.errorMsg]="!checkAgeValidation">
+            <div *ngIf="!(checkAgeValidation && getAge.touched)"  class="form-text text-danger" >{{getAge.errors | json}} </div>
+          </div>
+    
+    
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Email" formControlName="email" [class.successMsg]="checkEmailValidation" [class.errorMsg]="!checkEmailValidation">
+            <div *ngIf="!(checkEmailValidation && getEmail.touched)" id="emailHelp" class="form-text text-danger" > {{getEmail.errors | json}} </div>
+          </div>
+    
+    
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"  placeholder=" Password" formControlName="password" [class.successMsg]="checkPasswordValidation" [class.errorMsg]="!checkPasswordValidation">
+          <div  *ngIf="!(checkPasswordValidation && getPassword.touched)" id="emailHelp" class="form-text text-danger"> {{getPassword.errors | json}} </div>
+        </div>
+       <!-- <p>
+           {{ourValidation.value | json}}
+       </p>
+       <p>
+           {{ourValidation.controls["username"].errors | json}}
+       </p> -->
+        <button type="button"  class="btn btn-danger">Login</button>
+      </form>
+    </div>
+</div>
+    <br><br>
+
+
+
+
+    <!-- <div class="container" id="mydiv" ng-app="myApp" ng-controller="myCtrl">
+   
+        <h1 class="text-center">LOGIN</h1>
+        <br><br>
+<label for="namee">
+     name
+</label>
+<input id="namee" type="text"
+
+
+/>
+
+<p class="error_invalid"
+>Invalid name</p>
+<ng-template  #validname>
+    <p
+    class="valid" 
+    >valid name</p> 
+</ng-template>
+
+
+<br><br>
+
+<label for="age">
+     age
+</label>
+
+<input type="text" id="agee" 
+
+
+
+>
+<p class="error_invalid" 
+>Invalid age</p>
+
+
+<br><br>
+
+<label for="address">
+     address
+</label>
+<input type="text" 
+
+
+/>
+<p
+
+class="error_invalid"
+>Invalid address</p> 
+<ng-template  #validaddress>
+    <p
+    class="valid" 
+    >valid address</p> 
+</ng-template>
+<br><br><br>
+<button class="btn btn-secondary " > Add student </button>
+<br><br>
+
+</div> -->

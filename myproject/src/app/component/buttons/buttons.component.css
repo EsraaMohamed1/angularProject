@@ -1,0 +1,47 @@
+button{
+    display:block;
+    width: 100px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    
+    position: relative;
+    top: 60px;
+    background-color: rgb(213, 235, 117);
+    border: 1px white solid;
+   font-family:cursive;
+}
+span{
+    display: block;
+}
+p{
+    position: relative;
+    top: 60px;
+    font-size: 25px;
+   font-family:cursive;
+   color: rgb(13, 78, 219);
+   
+}
+button:hover{
+    color: black;
+    display: block;
+    width: 130px;
+}
+.container1{
+
+    margin-top: 150px;
+    background-color: rgb(250, 255, 253);
+    border-radius: 10px;
+    border: rgb(185, 216, 49) 1px solid;
+    border-left: rgb(255, 255, 255) 1px solid;
+   
+    width: 135px;
+    height: 400px;
+    float: left;
+    
+}
+ /* div{
+    width: 150px;
+    height: 500px;
+    background-color: beige;
+    border: 1px blueviolet solid;
+}  */

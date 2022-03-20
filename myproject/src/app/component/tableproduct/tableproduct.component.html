@@ -1,0 +1,55 @@
+<div class="container">
+
+    <p appLightbox mouseenterr="blue" id="ppp" class="text-center text-danger fs-1">Our Products </p>
+    <table class="table ">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Required Qunatity</th>
+            <th scope="col">Price</th>
+            
+            <th scope="col">Action</th>
+           
+          </tr>
+        </thead>
+         
+            <tbody class="text-center ">
+         
+           <tr *ngFor="let item of arrproduct" class="mt-4"
+          [class.bg-info]="item.quantity==1"
+          >
+            
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td><img appLightbox mouseenterr="green" mouseoutt="black" [src]="item.imagrUrl"></td>
+             <td>{{item.quantity}}</td>
+            <td><input class="mt-4 border-light rounded" type="number" 
+                placeholder="enter quantity"
+                #temp
+                ></td>
+            <td >{{item.price|currency}}</td>
+           
+            <td><button class="btn btn-primary mt-4" (click)="buyproduct(item.price,temp.value)">Bye Now </button></td>
+ 
+           
+          </tr> 
+          
+        </tbody>
+      
+      </table>
+      
+      <div class="price">
+        <img src="assets/total.png" height="10px">
+        <p class="fs-4">total price is : <span class="text-danger">{{totalprice}}</span></p>
+       
+      </div>
+      <div class="totalitems">
+      <p class="pimgg fs-4"> <img src="assets/cart.png" width="50px">:
+        <span id="spann2"> {{count}} </span> items </p>
+      </div>
+      <!-- <p class="d-none" [ngIf]="temp.value"> error..enter valid number</p> -->
+    </div>
+    

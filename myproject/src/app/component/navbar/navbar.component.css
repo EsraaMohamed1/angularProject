@@ -1,0 +1,33 @@
+nav{
+    height: 80px !important;
+}
+a{
+    font-size: 20px;
+    transition: color 0.5s;
+}
+a:hover{
+    color:rgb(236, 219, 65) !important;
+    font-size: 25px;
+    border-bottom: 4px rgb(236, 219, 65) solid; 
+}
+.span1{
+    color: rgb(240, 235, 170);
+   font-size: 20px;
+    margin-left: 60%;
+}
+.span2{
+    animation: rot 1000ms infinite linear;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+@keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

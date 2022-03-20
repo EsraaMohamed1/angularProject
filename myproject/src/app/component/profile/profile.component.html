@@ -1,0 +1,26 @@
+<div class="container">
+  <br>
+    <p class="ppp text-left text-success fs-3">Customers Data{{getid}} </p>
+    <table class="table ">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <!-- <th scope="col">Username</th> -->
+            <th scope="col">show datails</th>
+          </tr>
+        </thead>
+         
+            <tbody class="text-center ">
+         
+          <tr *ngFor="let user of users " class="mt-4">
+            <td>{{user.id}}</td>
+             <td>{{user.name}}</td> 
+             <!-- <td>{{user.username}}</td> -->
+            <td>  <a routerLink="{{user.id}}" class="btn btn-success">show profile</a></td>
+               </tr>
+
+        </tbody>
+      </table>
+      <br><br><br>
+    </div>
